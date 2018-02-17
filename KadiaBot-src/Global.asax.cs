@@ -20,7 +20,7 @@ namespace SimpleEchoBot
             Conversation.UpdateContainer(
                 builder =>
                 {
-                    builder.RegisterModule(new AzureModule(Assembly.GetExecutingAssembly()));
+                   /* builder.RegisterModule(new AzureModule(Assembly.GetExecutingAssembly()));
 
                     // Using Azure Table Storage
                     var store = new TableBotDataStore(ConfigurationManager.AppSettings["AzureWebJobsStorage"]); // requires Microsoft.BotBuilder.Azure Nuget package 
@@ -32,7 +32,7 @@ namespace SimpleEchoBot
                     builder.Register(c => store)
                         .Keyed<IBotDataStore<BotData>>(AzureModule.Key_DataStore)
                         .AsSelf()
-                        .SingleInstance();
+                        .SingleInstance();*/
 
                 });
             GlobalConfiguration.Configure(WebApiConfig.Register);
